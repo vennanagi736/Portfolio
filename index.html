@@ -6,6 +6,20 @@
 <title>Venna Venkata Nagireddy — Java Full Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<<<<<<< HEAD
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "oqmd8WWStFXgZowOd",
+      });
+   })();
+</script>
+
+=======
+>>>>>>> 6c473d39c1ce3be687112c21508e084c31dc0d48
 <style>
 :root{
   --white:#FFFFFF;
@@ -655,9 +669,28 @@ footer .fchip{ border:1px solid var(--border); padding:5px 12px; border-radius:9
       <a class="clink" href="mailto:vennanagi884@gmail.com?subject=Resume%20Request"><span class="ci">⇓</span><span><span class="ck">RESUME</span><span class="cv">Request via email</span></span></a>
     </div>
     <form class="glass contact-form" id="contactForm" novalidate>
+<<<<<<< HEAD
+
+      <div class="field" data-field="name">
+	<label>NAME</label>
+	<input id="name" type="text" required placeholder="Your name">
+	<div class="field-err"></div>
+      </div>
+      <div class="field" data-field="email">
+	<label>EMAIL</label>
+	<input id="email" type="email" required placeholder="you@example.com">
+	<div class="field-err"></div>
+      </div>
+      <div class="field" data-field="message">
+	<label>MESSAGE</label>
+	<textarea id="message" rows="4" required placeholder="Say hello…"></textarea>
+	<div class="field-err"></div>
+      </div>
+=======
       <div class="field" data-field="name"><label>NAME</label><input type="text" required placeholder="Your name"><div class="field-err"></div></div>
       <div class="field" data-field="email"><label>EMAIL</label><input type="email" required placeholder="you@example.com"><div class="field-err"></div></div>
       <div class="field" data-field="message"><label>MESSAGE</label><textarea rows="4" required placeholder="Say hello…"></textarea><div class="field-err"></div></div>
+>>>>>>> 6c473d39c1ce3be687112c21508e084c31dc0d48
       <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer; justify-content:center;">Send Message</button>
       <div class="form-msg" id="formMsg"></div>
     </form>
@@ -913,9 +946,41 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 
   const formMsg = document.getElementById('formMsg');
   if(!valid){ formMsg.textContent = ''; return; }
+<<<<<<< HEAD
+     sendMail();
+});
+
+function sendMail() {
+
+    const formMsg = document.getElementById("formMsg");
+
+    const params = {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send(
+        "service_nesfbza",
+        "template_6928alm",
+        params
+    )
+    .then(function () {
+        formMsg.style.color = "green";
+        formMsg.textContent = "✓ Message sent successfully!";
+        document.getElementById("contactForm").reset();
+    })
+    .catch(function (error) {
+        console.log(error);
+        formMsg.style.color = "red";
+        formMsg.textContent ="❌ Failed to send message.";
+    });
+}
+=======
   formMsg.textContent = '✓ Message ready — this form has no backend yet, please use the email link to actually reach me.';
   form.reset();
 });
+>>>>>>> 6c473d39c1ce3be687112c21508e084c31dc0d48
 </script>
 
 </body>
